@@ -1,0 +1,12 @@
+#audioControl{
+    display: block;
+}
+.list-group-item h4{
+    float: left;
+}
+.none{
+    display: none;
+}
+#list{
+    margin-top: 20px;
+}

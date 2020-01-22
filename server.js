@@ -25,10 +25,12 @@ app.post('/word',urlencodedParser,function(req,res){
         console.log("文件["+filename+"]下载完毕");
     });
     baseModel.findOneById('word',{'word':word},function(result){
+        console.log()
         if(result){
             res.end("2");
         }else{
-            baseModel.insert('word',{'word':word,'explains':explains,'audioUrl':filename},function(result){
+            var t1 = Date.now();
+            baseModel.insert('word',{'word':word,'explains':explains,'audioUrl':filename,'time':t1},function(result){
                 if(result){
                     res.end("1");
                 }
