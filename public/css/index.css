@@ -1,87 +1,146 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+body{
+  font-family:宋体,Georgia, 'Times New Roman', Times, serif;
+  color: #555;
 }
-header{
-    display: block;
-    height: 60.8px;  
-}
-body {
-    min-width: 800px;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/debut_light.png");
-}
-
-.nav {
-  display: flex;
-  position: fixed;
-  z-index: 10000;
-  overflow: hidden;
-  width: 3000px;
-  max-width: 100%;
-  min-width: 800px;
-  background-color: #fff;
-  padding: 0 20px;
-  box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
-  opacity: .90;
-}
-
-.nav-item {
-  color: #83818c;
-  padding: 20px;
-  text-decoration: none;
-  transition: .3s;
-  margin: 0 6px;
-  z-index: 1;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  position: relative;
-}
-.nav-item:before {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #dfe2ea;
-  border-radius: 8px 8px 0 0;
-  opacity: 0;
-  transition: .3s;
-}
-.nav-item:nth-child(1){
-    margin-left: 30px;
-}
-.nav-item:not(.is-active):hover:before {
-  opacity: 1;
-  bottom: 0;
-}
-
-.nav-item:not(.is-active):hover {
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
   color: #333;
 }
+@media (min-width:1200px){
 
-.nav-indicator {
+}
+.blog-masthead{
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-nav-item{
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,.blog-nav-item:focus{
+  color: #fff;
+  text-decoration: none;
+}
+.blog-nav .active{
+  color: #fff;
+}
+.blog-nav .active:after{
   position: absolute;
-  left: 0;
   bottom: 0;
-  height: 4px;
-  transition: .4s;
-  height: 5px;
-  z-index: 1;
-  border-radius: 8px 8px 0 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid ;
+  border-left: 5px solid transparent;
+}
+.blog-header{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-title{
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+.blog-description{
+  font-size: 20px;
+  color: rgb(95, 95, 95);
+}
+.blog-main{
+  font-size: 18px;
+  line-height: 1.5;
+}
+.sidebar-module{
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset{
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+margin-bottom: 0;
+}
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
 }
 
-@media (max-width: 580px) {
-  .nav {
-    overflow: auto;
-  }
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+.bootstrap-example-png img{
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+.bootstrap-example-png img:hover{
+  border-color: #428bca;
+}
+.bootstrap-example-png > div{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.bootstrap-example-png h4{
+  margin-bottom: 0px;
+}
+.bootstrap-example-png p{
+  font-size: .9em;
+}
+.container .row .blog-main{
+  padding: 0;
+}
+#temp{
+  height: 300px;
+  padding: 10px;
+  margin-top: 20px;
+}
+#tip{
+  padding: 0;
+  display: none;
+}
+#audioControl,#save{
+  display: none;
+}
+#audioControl:hover{
+  cursor: pointer;
 }

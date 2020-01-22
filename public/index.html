@@ -4,22 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>英文学习</title>
-    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <title>我要学习</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/index.js"></script>
-</head> 
+</head>
 <body>
-    <header>
-        <nav class="nav">
-            <a href="#" class="nav-item is-active" active-color="orange">背单词</a>
-            <a href="#" class="nav-item" active-color="green">增加单词</a>
-            <a href="#" class="nav-item" active-color="blue">课本</a>
-            <!--<a href="#" class="nav-item" active-color="red">敬请期待</a>
-            <a href="#" class="nav-item" active-color="rebeccapurple">敬请期待</a>-->
-            <span class="nav-indicator"></span>
-        </nav>
-    </header>
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item active" href="index.html">首页</a>
+                <a class="blog-nav-item" href="world.html">单词</a>
+                <a class="blog-nav-item" href="#">课本</a>
+                <a class="blog-nav-item" href="#">笔记</a>
+                <a class="blog-nav-item" href="#">关于</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog-header">
+            <h1 class="blog-title">Weclome!</h1>
+            <p class="lead blog-description">You can input English words 
+                you don't know into the input box below for translation.<br>
+                It can translate English into Chinese.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-9 blog-main">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                    <input id="world" type="text" class="form-control" placeholder="Please enter the world...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="translate">翻译</button>
+                    </span>
+                    </div><!-- /input-group -->
+                    <article id="temp">
+                        <div id="audioControl">
+                            <div class="play">
+                                <span id="play" class="glyphicon glyphicon-volume-up"></span>
+                            </div>
+                        </div>
+                        <audio id="media">
+                        </audio>
+                        <div id="meaning"></div>
+                        <button class="btn btn-success" type="button" id="save">保存</button>
+                        <span class="alert alert-success small" id="tip">保存成功</span>
+                    </article>
+                </div><!-- /.col-lg-6 -->
+
+            </div>
+            <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
+                <div class="sidebar-module">
+                    <h4>我的链接</h4>
+                    <ol class="list-unstyled">
+                        <li><a target="_blank" href="https://github.com/guasses">Github</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="blog-footer">
+        <p><a href="#"></a>Copyright &copy;2020 hezihu</p>
+        <p><a href="#">返回顶部</a></p>
+    </footer>
 </body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script src="https://cdn.bootcss.com/js-sha256/0.9.0/sha256.js"></script>
+<script src="js/index.js"></script>
 </html>
