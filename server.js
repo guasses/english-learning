@@ -9,8 +9,8 @@ const BaseModel = require('./js/base_model.js');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-server.listen(80,()=>{
-    console.log('端口80已运行web服务!');
+server.listen(8080,()=>{
+    console.log('端口8080已运行web服务!');
 });
 var baseModel = new BaseModel();
 app.post('/word',urlencodedParser,function(req,res){
