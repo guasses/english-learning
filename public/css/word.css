@@ -1,12 +1,15 @@
 #audioControl{
     display: block;
 }
-.list-group-item h4{
-    float: left;
-}
 .none{
     display: none;
 }
-#list{
+.list{
+    margin-top: 10px;
+}
+.list-group-item{
+    cursor: pointer;
+}   
+.p{
     margin-top: 20px;
 }
