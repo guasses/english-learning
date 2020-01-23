@@ -49,11 +49,12 @@ $(function(){
     });
     $("#save").click(function(e){
         $.post('word',{word:word,explains:explains,audioUrl:audioUrl},function(data){
-            console.log(data);
+            //console.log(data);
             if(data=="2"){
                 alert("该单词数据库中已存在");
             }else if(data=="1"){
-                alert("插入成功！");
+                console.log("插入成功！");
+                //alert("插入成功！");
             }
         });
     });

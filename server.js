@@ -29,14 +29,41 @@ app.post('/word',urlencodedParser,function(req,res){
         if(result){
             res.end("2");
         }else{
-            var t1 = Date.now();
-            baseModel.insert('word',{'word':word,'explains':explains,'audioUrl':filename,'time':t1},function(result){
+            let t = Date.now();
+            let t1 = new Date(parseInt(t));
+            let Y = t1.getFullYear();
+            let M = "0"+(t1.getMonth()+1);
+            let D = t1.getDate();
+            let t2 = ""+Y+M+D;
+            baseModel.insert('word',{'word':word,'explains':explains,'audioUrl':filename,'time':t2},function(result){
                 if(result){
                     res.end("1");
                 }
             });
         }
     });
+});
+app.post("/wordList",urlencodedParser,function(req,res){
+    let date = req.body.date;
+    if(date == "new"){
+        var whereJson = {
+        'and':[],
+        'or':[]
+        };
+        var orderByJson = {'key':'time','type':'desc'};
+        var limitArr = [0,1];
+        var fieldsArr = ['time'];
+        baseModel.find('word',whereJson,orderByJson,limitArr,fieldsArr,function(data){
+            let t1 = data[0]['time'];
+            let w = {'and':[{'key':'time','opts':'=','value':t1}],'or':[]};
+            var o = {'key':'id','type':'desc'};
+            baseModel.find('word',w,o,[],[],function(d){
+                res.end(JSON.stringify(d));
+            });
+        });
+    }else{
+
+    }
 });
 app.use(express.static('public'));
 
